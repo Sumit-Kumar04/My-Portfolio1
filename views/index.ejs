@@ -1,0 +1,200 @@
+ <%- include("layouts/boilerplate.ejs") %>
+
+
+
+
+
+<body>
+  <div id="flash-message"></div>
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="assets/videos/green.mp4" type="video/mp4">
+  </video>
+   <div class="video-overlay"></div>
+  
+ <div class="container" >
+   <header>
+    <h1 class="logo">Sinwar<span style="color:#2ECCB6">X</span></h1>
+      
+    <nav id="nav-links">
+      <a href="/">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="/aboutMe">About Me</a>
+    </nav>
+    <div class="dcv"><a href="assets/Sumit_Kumar_CV.pdf" download class="cv-btn">Download CV</a></div>
+  </header>
+
+
+ </div>
+   
+
+
+  <div class="content" >
+  <h1>Hi, I'm <span style="font-size: 2.5rem; font-weight:500; color:#2ECCB6"> Sumit Kumar</span></h1>
+ <p class="intro">
+  <span><strong>Full-Stack Developer</strong> & <strong>BTech CSE Student</strong></span>
+  <span>Skilled in <strong>Java</strong>, <strong>JavaScript</strong>, and the <strong>MERN stack</strong></span>
+  <span>Building sleek, functional web apps that bring ideas to life</span>
+</p>
+
+
+
+  <div class="btn-group">
+    <a href="#contact" class="btn-primary">Hire Me</a>
+    <a href="#projects" class="btn-outline">View Projects</a>
+  </div>
+
+  <a href="#skills" class="scroll-down">
+    <span></span>
+  </a>
+</div>
+
+<section id="skills" class="skills-section">
+  <h2 class="head">My Skills 💪</h2>
+  <div class="skills-grid">
+    
+    <div class="skill-card"><img src="assets/images/2.png" alt="Skill 1"></div>
+    
+    <div class="skill-card"><img src="assets/images/6.png" alt="Skill 2"></div>
+    <div class="skill-card"><img src="assets/images/7.png" alt="Skill 3"></div>
+   
+    <div class="skill-card"><img src="assets/images/10.png" alt="Skill 4"></div>
+    <div class="skill-card"><img src="assets/images/11.png" alt="Skill 5"></div>
+    <div class="skill-card"><img src="assets/images/12.png" alt="Skill 6"></div>
+    <div class="skill-card"><img src="assets/images/1.png" alt="Skill 7"></div>
+    <div class="skill-card"><img src="assets/images/3.png" alt="Skill 8"></div>
+    <div class="skill-card"><img src="assets/images/4.png" alt="Skill 9"></div>
+    <div class="skill-card"><img src="assets/images/5.png" alt="Skill 10"></div>
+    <div class="skill-card"><img src="assets/images/8.png" alt="Skill 11"></div>
+    <div class="skill-card"><img src="assets/images/9.png" alt="Skill 12"></div>
+  
+    
+  </div>
+
+   
+</section>
+
+<section class="projects-section" id="projects">
+  <h2 class="head">My Projects 🚀</h2>
+  <div class="project">
+    <!-- Left: Video -->
+    <div class="project-video">
+      <video src="assets/videos/vid.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <!-- Right: Content -->
+    <div class="project-content">
+      <h2>Hoomies</h2>
+      <p>
+        Hooomies is a modern real-estate platform built for a smooth property search experience. 
+        Fully responsive and optimized for speed.
+      </p>
+      <a href="https://hoomies-9gp4.onrender.com/listings" target="_blank" class="project-btn">Visit Website <i class="fas fa-arrow-up-right-from-square"></i></a>
+    </div>
+  </div>
+  <div class="project">
+    <!-- Left: Content -->
+    <div class="project-content">
+        <h2>Portfolio</h2>
+       <p>
+    This personal portfolio showcases my projects, skills, and achievements as a Computer Science student. 
+    Designed with a modern, responsive layout, it provides an engaging way to explore my work, from web development to creative designs.
+</p>
+        <a href="https://hoomies-9gp4.onrender.com/listings" target="_blank" class="project-btn">
+            Visit Website <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+
+    <!-- Right: Video -->
+    <div class="project-video">
+        <video src="assets/videos/vid2.mp4" autoplay muted loop playsinline></video>
+    </div>
+</div>
+</section>
+
+<!-- Contact Me Section -->
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <h1 style="font-size: 2rem; color:#2ECCB6;">Contact Me</h1>
+    <p>Interested in working together or have a question? Drop a message!</p>
+
+    <form action="send-email" method="post" class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message"  placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-links">
+      <a href="https://github.com/Sumit-Kumar04" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/sumit-kumar-b39593273" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <p>© 2025 Sumit Kumar | All Rights Reserved <i class="fas fa-heart"></i></p>
+   
+  </div>
+  <div class="footEle">
+    <a href="/">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="/aboutMe">About Me</a>
+  </div>
+</footer>
+
+<script> 
+
+ const flashMessage = document.getElementById('flash-message');
+const form = document.getElementById('contact-form');
+
+if (flashMessage && form) {
+  //  showFlash
+  function showFlash(message, isSuccess = true) {
+  flashMessage.textContent = message;
+  flashMessage.style.backgroundColor = isSuccess ? '#2ecc71' : '#e74c3c'; // green or red
+  flashMessage.style.display = 'block';
+
+  setTimeout(() => {
+    flashMessage.style.display = 'none';
+  }, 3000); 
+}
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
+
+  try {
+    const res = await fetch('/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+
+    if (result.status === 'success') {
+      showFlash('Message sent successfully!', true);
+      form.reset();
+    } else {
+      showFlash(result.message || 'Failed to send message.', false);
+    }
+  } catch {
+    showFlash('Error sending message.', false);
+  }
+});
+}
+
+
+
+
+
+</script>
+ 
+</body>
