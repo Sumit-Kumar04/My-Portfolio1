@@ -253,22 +253,25 @@ nav a:hover {
   
  }
 
- .dcv{
-  font-size: 0.8rem;
-  padding-top:0.2rem;
-  padding-bottom:0.2rem;
-  padding-left:0.3rem ;
-  padding-right: 0.3rem;
+ .dcv {
+    font-size: 0.9rem;          
+    padding: 0.5rem 1rem;       
+    border-radius: 40px;        
+  }
 
- }
+  .dcv a {
+    font-size: 0.60rem;         
+  }
  .logo{
   font-size: 1.8rem;
   padding-right: 2rem;
  }
  .content{
+  padding-top: 1rem;
   padding-left: 2rem;
   padding-right:0.2rem;
  }
+
 
   
 }
