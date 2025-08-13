@@ -125,26 +125,7 @@ nav a:hover {
   }
 }
 
-/* Mobile view */
-@media (max-width: 768px) {
- nav{
-  display: none;
-  
- }
 
- .dcv{
-  font-size: 1rem;
-  padding:0.3rem 0.8rem;
- }
- .logo{
-  font-size: 1.8rem;
- }
- .content{
-  padding-right:1rem;
- }
-
-  
-}
 
 /* Main Content */
 .content {
@@ -153,6 +134,7 @@ nav a:hover {
   padding-top: 160px; /* Space for header */
   padding-left: 5rem;
 }
+
 
 
 /* Button Group */
@@ -263,6 +245,33 @@ nav a:hover {
   100% { transform: translateY(0); opacity: 1; }
 }
 
+
+/* Mobile view */
+@media (max-width: 768px) {
+ nav{
+  display: none;
+  
+ }
+
+ .dcv{
+  font-size: 0.8rem;
+  padding-top:0.2rem;
+  padding-bottom:0.2rem;
+  padding-left:0.3rem ;
+  padding-right: 0.3rem;
+
+ }
+ .logo{
+  font-size: 1.8rem;
+  padding-right: 2rem;
+ }
+ .content{
+  padding-left: 2rem;
+  padding-right:0.2rem;
+ }
+
+  
+}
 /* Skills Section */
 .skills-section {
   background: linear-gradient(135deg, #000000, #0d0d0d, #111);
