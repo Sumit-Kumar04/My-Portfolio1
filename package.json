@@ -1,12 +1,11 @@
 {
-  "engines":{
-      "node": "22.16.0"
-  },
+  
   "name": "portfolio1",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
   },
   "author": "Sumit",
   "license": "ISC",
