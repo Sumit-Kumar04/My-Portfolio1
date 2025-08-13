@@ -25,8 +25,8 @@ app.post('/send-email',isValidDetail, (req, res) => {
   const { name, email, message } = req.body;
      
   const mailOptions = {
-    from: email, // sender address (visitor)
-    to: process.env.GMAIL_USER, // your gmail to receive emails
+    from: email, // sender address 
+    to: process.env.GMAIL_USER, 
     subject: `New message from ${name} via contact form`,
     text: `You have a new message:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
